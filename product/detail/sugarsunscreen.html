@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Serbael Concept Store</title>
+    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"> 
+                <a href="/index.html"><img src="/images/logo.png" width="250px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/product/product.html">Product</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="/images/cart.png" width="30px" height="30px">
+            <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()">
+       </div>
+    </div>
+    <!-----singel-product------>
+      
+    <div class="small-container">
+        <div class="single-product">
+            <div class="images-section">
+                <div class="larg-img">
+                    <img src="/images/PRODUCTS/SUGARDOLLS/3IN1SUNSCREEN.jpg" id="ProductImg">
+                </div>
+                <div class="small-img">
+                        <img src="/images/PRODUCTS/SUGARDOLLS/3IN1SUNSCREEN.jpg" id="selected" class="small-pic">
+ 
+                        <img src="/images/PRODUCTS/SUGARDOLLS/3IN1SUNSCREEN2.jpg"  class="small-pic">
+
+
+                </div>
+            </div> <!-- End of Images Section-->
+
+            <div class="product-detail">
+                <div class="product-name">
+                    <h2>SUGARDOLLS 3IN1 FACE AND BODY SUNSCREEN</h2>
+                </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-price">
+                    <h3>₱99.00</h3>
+                </div>
+                <div class="product-cart">
+                    <form id="cart-form">
+                        <div class="form-group">
+                            <p>Quantity:</p>
+                            <input type="number" class="cart-number" name="cartNumber" value="1" min="1" max="10">
+                            <input type="submit" name="addToCart" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <div class="product-meta">
+                    <p><b>Category: </b> Product/SugarDolls</p>
+                </div>
+                <div class="product-long-description">
+                    <h3>Product Description</h3>    
+                    
+                    <p>
+                    <br>Did you know that the sun rays are one the main causes for wrinkles, dark spots, sun spots and damaged skin texture? SWIPE THOSE WORRIES AWAY COS WE GOT YOU COVERED DOLLIES!😉 
+                    <br>𝗜𝗡𝗧𝗥𝗢𝗗𝗨𝗖𝗜𝗡𝗚 𝗧𝗛𝗘 𝗡𝗘𝗪 𝗦𝗨𝗚𝗔𝗥 𝗗𝗢𝗟𝗟𝗦 𝟯-𝗜𝗡-𝟭 𝗙𝗔𝗖𝗘 & 𝗕𝗢𝗗𝗬 𝗦𝗨𝗡𝗦𝗖𝗥𝗘𝗘𝗡 ☀️ 
+                    <br>YOUR SKINCARE AND SUN PROTECTION IN ONE!🤩 
+                    <br>
+                    <br>Here's why you need it:
+                    <br>🪶 it's SUUUPER LIGHTWEIGHT (you won't feel it's there!) 
+                    <br>☀️ keeps skin FEELING REFRESHED with its hydrating but NONGREASY formula ❤️  
+                    <br>🌞 Has BROAD-SPECTRUM SPF 50+ UVA/UVB protection that fights skin cancer, premature aging and dark spots caused by sun damage
+                    <br>🔥  absorbs quickly and is easy to apply 
+                    <br>💦 water resistant, leaves no white cast but leaves a glowing effect!
+                    <br>
+                    <br>SUNSCREEN that protects and makes the skin glow but doesn't feel eeky on this skin? THIS IS IT!!😉 
+                    <br>GET FIRST DIBS NOW AND GET THIS FOR ONLY 249 PESOS (60ML BIG!)!!!✨ 
+                    <br>
+                    <br>GO ON AND GIVE YOUR SKIN THE LOVE AND PROTECTION IT DESERVES! 
+                    </p>  
+                   
+                </div>
+            </div> <!-- End of Product Detail-->
+        </div>
+        <hr>
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Other Products</h2>
+            <a href="/product/product.html"><p>View More</p></a>
+        </div>
+    </div>
+    <!----- product------>
+    <div class="small-container">
+        <div class="row">
+            <div class="col-4">
+                <a href=""><img id="image" src="/images/PRODUCTS/DEARFACE/SUNFLOWEROIL.jpg"></a>
+                <h5>DEAR FACE<br> SUNFLOWER OIL</h5>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span>₱180.00 <i class="fa-solid fa-bag-shopping" style="color: #2487a0;"></i></span>
+            </div>
+            <div class="col-4">
+                <a href=""><img id="image" src="/images/PRODUCTS/BABE FORMULA/MOONBEAM.jpg"></a>
+                <h5>BABE MOONBEAM DAILY HAIR SPRAY</h5>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span>₱180.00 <i class="fa-solid fa-bag-shopping" style="color: #2487a0;"></i></span>
+            </div>
+            <div class="col-4">
+                <a href=""><img id="image" src="/images/PRODUCTS/RYXSKINCERITY/KENPAKU.png"></a>
+                <h5>RYXSKIN KENPAKU GLUTA</h5>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span>₱1,850.00 <i class="fa-solid fa-bag-shopping" style="color: #2487a0;"></i></span>
+            </div>
+            <div class="col-4">
+                <a href=""><img id="image" src="/images/PRODUCTS/JENNA ESSENCE/SCRUB1.jpg"></a>
+                <h5>COCOBERRY BLEACHING SCRUB</h5>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span>₱268.00<i class="fa-solid fa-bag-shopping" style="color: #2487a0;"></i></span>
+            </div>
+         </div>
+     </div>
+     
+    </div>       
+<div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Subscribe to our news</h3>
+                    <input type="email" placeholder="Your Email address">
+                    <button>Subscribe</button>
+                </div>
+                <div class="footer-col-2">
+                    <img src="/images/logo.png" width="300px">
+                    <p>Lorem ipsum dolor sit amet, consectetu adipiscing</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Coupon</a></li>
+                        <li><a href="#">Blog post</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Tiktok</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+    <script src="/login.js"></script>
+    <script src="/cart.js"></script>
+    <script src="/select.js"></script>
+    
+</body>
+
+</html>
