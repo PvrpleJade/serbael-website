@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Serbael Concept Store</title>
+    <link rel="icon" href="images/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"> 
+                <a href="index.html"><img src="images/logo.png" width="250px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/product/product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="/cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+       </div>
+    </div>
+
+	<section class="container content-section">
+		<h2 class="section-header">CART</h2>
+		<div class="cart-row">
+			<span class="cart-item cart-header cart-column">ITEM</span>
+			<span class="cart-price cart-header cart-column">PRICE</span>
+			<span class="cart-quantity cart-header cart-column">QUANTITY</span>
+		</div>
+		<div class="cart-items">
+			<div class="cart-row">
+				<div class="cart-item cart-column">
+					<img id = "productImage" class="cart-item-image" src= "/images/featured_prod1.jpg" width="100" height="100">
+					<span id="productName"class="cart-item-title">T-Shirt</span>
+				</div>
+				<span id = "productPrice" class="cart-price cart-column">		</span>
+				<div class="cart-quantity cart-column">
+					<input class="cart-quantity-input" type="number" value="0">
+					<button class="btn btn-danger" type="button">REMOVE</button>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+ <div class="small-container">
+    <div class="container">
+			<h2>Billing Detail</h2>
+			<div class="checkout-page">
+				<div class="billing-detail">					
+					<form class="checkout-form">
+						<h4>Shipping Detail</h4>
+						<div class="form-inline">
+							<div class="form-group">
+										<label>First Name</label>
+										<input type="text" id="fname" name="fname">
+									</div>
+									<div class="form-group">
+										<label>Last Name</label>
+										<input type="text" id="lname" name="lname">
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Company Name (Optional)</label>
+									<input type="text" id="cname" name="cname">
+								</div>
+								<div class="form-inline">
+									<div class="form-group">
+										<label>Country</label>
+										<select id="country" name="country">
+											<option>---Select a Country---</option>
+											<option>Philippines</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label>City</label>
+										<select id="cityy" name="cityy">
+											<option selected>---Select a City---</option>
+                                <option>Caloocan</option>
+                                <option >Las Piñas</option>
+                                <option >Makati</option>
+                                <option >Malabon</option>
+                                <option >Mandaluyong</option>
+                                <option >Manila</option>
+                                <option >Marikina</option>
+                                <option >Muntinlupa</option>
+                                <option >Navotas</option>
+                                <option >Parañaque</option>
+                                <option >Pasay</option>
+                                <option >Pasig</option>
+                                <option >Pateros</option>
+                                <option >Quezon City</option>
+                                <option >San Juan</option>
+                                <option >Taguig</option>
+                                <option >Valenzuela</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Address</label>
+									<textarea style="resize:none" id="address" name="address" rows="3"></textarea>
+								</div>
+								<h4>Contact Detail</h4>
+								<div class="form-inline">					
+									<div class="form-group">
+										<label>Tel</label>
+										<input type="text" id="tel" name="tel" minlength="11" maxlength="11">
+									</div>
+									<div class="form-group">
+										<label>Mobile</label>
+										<input type="text" id="mobile" name="mobile" minlength="11" maxlength="11">
+									</div>
+								</div>
+								<h4>Additional Information (Optional)</h4>
+								<div class="form-group">
+							<label>Order Note</label>
+							<textarea style="resize:none" id="address" name="address" rows="3"></textarea>
+						</div>					
+				</div>
+				<div class="order-summary">
+					<div class="checkout-total">
+					  <h3>Order Summary</h3>
+					  <ul>
+						<li>
+						  <div class="cart-total">
+							<strong class="cart-total-title">Total Amount:</strong>
+							<span id="total-price" class="cart-total-price">₱0.00</span>
+						  </div>
+						</li>
+						<li><input type="radio" name="payment"> Cash on Delivery</li>
+						<li>
+						  <button id="btn-purchase" class="btn btn-primary btn-purchase" type="button" onclick="generateReceipt()">PURCHASE</button>
+						</li>
+					  </ul>
+					</div>
+					<div id="receipt"></div>
+				  </div>	
+	</div>
+ </div>
+</div>
+
+    
+ <!-----footer---------->   
+ <div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Subscribe to our news</h3>
+				<input type="email" placeholder="Your Email address">
+				<button>Subscribe</button>
+			</div>
+			<div class="footer-col-2">
+				<img src="/images/logo.png" width="300px">
+				<p>Lorem ipsum dolor sit amet, consectetu adipiscing</p>
+			</div>
+			<div class="footer-col-3">
+				<h3>Useful Links</h3>
+				<ul>
+					<li><a href="#">Coupon</a></li>
+					<li><a href="#">Blog post</a></li>
+					<li><a href="#">Return Policy</a></li>
+					<li><a href="#">Join Affiliate</a></li>
+				</ul>
+			</div>
+			<div class="footer-col-4">
+				<h3>Follow us</h3>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Instagram</a></li>
+					<li><a href="#">Tiktok</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="/main.js"async></script>
+    <script src="/login.js"async></script>
+<script> 
+	const productNameElement = document.getElementById('productName');
+	const productPriceElement = document.getElementById('productPrice');
+	const productImageElement = document.getElementById('productImage');
+	
+	// Get the product details from local storage
+	const productName = localStorage.getItem('productName');
+	const productPrice = localStorage.getItem('productPrice');
+	const productImage = localStorage.getItem('productImage');
+	
+	// Display the product details
+	productNameElement.textContent = productName;
+	productPriceElement.textContent = productPrice;
+	productImageElement.src = productImage;</script>
+	
+<script src = "/sample.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        databaseURL: "YOUR_DATABASE_URL",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
+    };
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    // Get the products from the database and display them in the table
+    const productsList = document.getElementById('products-list');
+    onValue(ref(database, 'products'), (snapshot) => {
+      productsList.innerHTML = '';
+      snapshot.forEach((product) => {
+        const { name, description, price, image } = product.val();
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${name}</td>
+          <td>${description}</td>
+          <td>${price}</td>
+          <td><img src="${image}" alt="${name}" width="100" height="100"></td>
+          <td><button data-product-id="${product.key}">Add to cart</button></td>
+        `;
+        productsList.appendChild(row);
+      });
+    });
+
+    // Add an event listener to the table to handle add-to-cart button clicks
+    productsList.addEventListener('click', (event) => {
+      if (event.target.nodeName === 'BUTTON') {
+        const productId = event.target.getAttribute('data-product-id');
+        // TODO: add the product with productId to the shopping cart
+        console.log(`Add product ${productId} to cart`);
+      }
+    });
+  </script>
+	
+</body>
+</html>

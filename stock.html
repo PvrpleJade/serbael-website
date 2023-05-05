@@ -1,0 +1,74 @@
+<form>
+    <label for="name">Product name: </label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="description">Product description:</label>
+    <textarea id="description" name="description" required></textarea>
+  
+    <label for="price">Product price:</label>
+    <input type="number" id="price" name="price" required>
+  
+    <label for="image">Product image URL:</label>
+    <input type="text" id="image" name="image" required>
+  
+    <button type="submit" id="add-product">Add product</button>
+  </form>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+  import { getDatabase,ref,push,set,child } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+    
+
+  
+ 
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyA9PDrdVqXHLNQOrSpjA2C98NZjc1Fud0w",
+  authDomain: "products-d9c61.firebaseapp.com",
+  projectId: "products-d9c61",
+  storageBucket: "products-d9c61.appspot.com",
+  messagingSenderId: "692969201963",
+  appId: "1:692969201963:web:d942ef47c1c98ef5ec256e",
+  measurementId: "G-LWLCK3T72Z"
+    };
+  
+   // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+  const addProductForm = document.querySelector('form');
+  addProductForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = event.target.elements.name.value;
+    const description = event.target.elements.description.value;
+    const price = event.target.elements.price.value;
+    const image = event.target.elements.image.value;
+
+    // Add the new product to the database
+    const newProductRef = push(child(ref(database), 'products'));
+    set(newProductRef, {
+      name: name,
+      description: description,
+      price: price,
+      image: image
+    }).then(() => {
+      console.log('New product added');
+      addProductForm.reset();
+    }).catch((error) => {
+      console.error('Error adding product: ', error);
+    });
+  });
+  </script>
+  
+  
+  
+  
+  
